@@ -11,4 +11,10 @@ export default defineConfig({
          '@': path.resolve(__dirname, './src'),
       },
    },
+   // Prevent React From restarting due to db.json file change
+   server: {
+      watch: {
+         ignored: '**/server/**',
+      },
+   },
 });
